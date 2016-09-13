@@ -1,0 +1,460 @@
+/*---------------------------------------------------------------------------------
+
+Navigation menu stylesheet
+
+Name:			Expandable Navigation (off canvas menu)
+Autor:			Claudia Romano
+More info:		http://codyhouse.co/gem/secondary-expandable-navigation
+
+Note: IE9 doesn't support transitions and animations
+
+---------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------ *
+ *  Header
+/* ------------------------------------ */
+
+header {
+	top: 0;
+	left: 0;
+	height: 150px;
+	width: 100%;
+	z-index: 9999;
+}
+
+@media only screen and (max-width: 768px) {
+	header {
+		height: 350px;
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Header logo
+/* ------------------------------------ */
+
+#cd-logo {
+	display: block;
+	float: left;
+	margin: 0px;
+	padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+	#cd-logo {
+		padding: 5px;
+	}
+	#cd-logo img {
+		max-width:100%;
+		max-height:100%;
+	}
+	#cd-logo h1 {
+		font-size: 24px;
+	}
+}
+
+
+
+/* ------------------------------------ *
+ *  Header links
+/* ------------------------------------ */
+
+#social-media {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	height: 100%;
+}
+
+#social-media a {
+	display: inline-block;
+	height: 30px;
+	margin-left: 10px;
+	padding: 5px;
+	width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+	#social-media a {
+		display: block;
+		height: 50px;
+		margin-top: 10px;
+		padding: 10px;
+		width: 50px;
+	}
+}
+
+
+#cd-top-nav {
+	position: absolute;
+	top: 0;
+	right: 70px;
+	height: 100%;
+}
+#cd-top-nav ul {
+	height: 100%;
+	margin: 0;
+	padding-top: 12px;
+}
+#cd-top-nav li {
+	display: inline-block;
+	margin-right: 1em;
+}
+#cd-top-nav a {
+	display: inline-block;
+	padding: 8px;
+	font-weight: bold;
+}
+#cd-top-nav i {
+	display: inline-block;
+	padding: 0 8px 0 0;
+}
+
+#cd-top-nav .icon-fa-heading {
+	display: inline-block;
+}
+
+#cd-top-nav h4 {
+	font-size: 14px;
+}
+#cd-top-nav span {
+	font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+	#cd-top-nav {
+		display: block;
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Navigation menu
+/* ------------------------------------ */
+
+#top-nav {
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	/* the secondary navigation is covered by the main element */
+	z-index: 99999999;
+	background: transparent;
+	margin-top: -35px;
+}
+@media only screen and (max-width: 768px) {
+	#cd-lateral-nav {
+		top: 15px;
+	}
+	#top-nav {
+		display: none;
+	}
+}
+
+#top-nav .cd-navigation {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#top-nav .cd-navigation li {
+	display: inline-block;
+	padding: 25px 0 15px 0;
+}
+
+#top-nav .cd-navigation li a {
+	padding: 0 30px;
+}
+
+#top-nav .cd-navigation li:last-child a {
+	border-right: none;
+}
+
+#top-nav .sub-menu {
+	position: absolute;
+	display: none;
+	margin-top: 20px;
+}
+#top-nav .sub-menu li {
+	display: block;
+	padding: 10px 5px 10px 5px;
+}
+
+#top-nav .sub-menu li:last-child {
+	border-bottom: none;
+}
+
+#top-nav .sub-menu li a{
+	border-right: none;
+}
+
+#top-nav a {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+	#top-nav .cd-navigation {
+
+	}
+}
+
+/* style menu items which have a submenu  */
+#top-nav .item-has-children > a {
+	position: relative;
+}
+/* this is the right arrow to show that the item has a submenu  */
+#top-nav .item-has-children > a::after {
+	content: '';
+	display: block;
+	height: 11px;
+	width: 8px;
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 1em;
+	background: url("../img/menu/cd-arrow.svg") no-repeat center center;
+	background-size: 8px 11px;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+#top-nav .item-has-children > a.submenu-open::after {
+	-webkit-transform: translateY(-50%) rotate(90deg);
+	-moz-transform: translateY(-50%) rotate(90deg);
+	-ms-transform: translateY(-50%) rotate(90deg);
+	-o-transform: translateY(-50%) rotate(90deg);
+	transform: translateY(-50%) rotate(90deg);
+}
+#cd-lateral-nav {
+	display: none;
+}
+
+
+
+
+/* ------------------------------------ *
+ *  Menu trigger
+/* ------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+	#cd-menu-trigger {
+		position: absolute;
+		padding: 5px;
+		right: 0px;
+		top: 0px;
+		height: 50px;
+		width: 50px;
+		-webkit-transition: all 0.6s ease-in-out;
+		-moz-transition: all 0.6s ease-in-out;
+		-o-transition: all 0.6s ease-in-out;
+		-ms-transition: all 0.6s ease-in-out;
+		transition: all 0.6s ease-in-out;
+	}
+
+	#cd-menu-trigger::before {
+		content: 'MENU';
+		position: absolute;
+		background-color: transparent;
+		width: 70px;
+		height: 70px;
+		top: 50%;
+		margin-top: -10px;
+		margin-left: -50px;
+	}
+
+	#cd-menu-trigger .cd-menu-icon {
+		position: absolute;
+		display: inline-block;
+		left: 50%;
+		top: 50%;
+		margin-top: -2px;
+		margin-left: -15px;
+		width: 30px;
+		height: 4px;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+	}
+	#cd-menu-trigger .cd-menu-icon::before, #cd-menu-trigger .cd-menu-icon:after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: inherit;
+		left: 0;
+	}
+	#cd-menu-trigger .cd-menu-icon::before {
+		bottom: 10px;
+		width: 30px;
+	}
+	#cd-menu-trigger .cd-menu-icon::after {
+		top: 10px;
+		width: 30px;
+	}
+
+	#cd-menu-trigger:hover .cd-menu-icon {
+		width: 15px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	#cd-menu-trigger:hover .cd-menu-icon::before {
+		width: 30px;
+	}
+	#cd-menu-trigger:hover .cd-menu-icon::after {
+		width: 30px;
+	}
+
+	#cd-menu-trigger.is-clicked {
+		right: 0;
+	}
+	#cd-menu-trigger.is-clicked .cd-menu-icon::before {
+		bottom: 0;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	#cd-menu-trigger.is-clicked .cd-menu-icon::after {
+		top: 0;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	#cd-lateral-nav {
+		font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+		/* the secondary navigation is covered by the main element */
+		z-index: 99999999;
+		background: transparent;
+		display: block;
+	}
+	#cd-lateral-nav .cd-navigation {
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	#cd-lateral-nav .cd-navigation li {
+		display: block;
+		padding: 5px 0 5px 0;
+	}
+
+	#cd-lateral-nav .cd-navigation li a {
+		padding: 0 30px;
+	}
+	#cd-lateral-nav .sub-menu {
+		position: relative;
+		display: none;
+		margin-top: 10px;
+	}
+	#cd-lateral-nav .sub-menu li {
+		display: block;
+		padding: 5px 5px 5px 5px;
+	}
+
+	#cd-lateral-nav .sub-menu li:last-child {
+		border-bottom: none;
+	}
+
+	#cd-lateral-nav .sub-menu li a{
+		border-right: none;
+	}
+}
+
+
+
+@keyframes runInnerIn {
+	0%   {
+		-webkit-transform: translateY(-25%);
+		-moz-transform: translateY(-25%);
+		-ms-transform: translateY(-25%);
+		-o-transform: translateY(-25%);
+		transform: translateY(-25%);
+	}
+	60%  {
+		-webkit-transform: translateY(5%);
+		-moz-transform: translateY(5%);
+		-ms-transform: translateY(5%);
+		-o-transform: translateY(5%);
+		transform: translateY(5%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+}
+@keyframes runInnerOut {
+	0%   {
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	60%  {
+		-webkit-transform: translateY(5%);
+		-moz-transform: translateY(5%);
+		-ms-transform: translateY(5%);
+		-o-transform: translateY(5%);
+		transform: translateY(5%);
+	}
+	100% {
+		-webkit-transform: translateY(-25%);
+		-moz-transform: translateY(-25%);
+		-ms-transform: translateY(-25%);
+		-o-transform: translateY(-25%);
+		transform: translateY(-25%);
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Body content
+/* ------------------------------------ */
+
+#body-content {
+	/* set a height and a z-index to be sure that the main element completely covers the lateral menu */
+	height: 100%;
+	position: relative;
+	z-index: 999;
+}
+
+
+@media only screen and (max-width: 768px) {
+	#body-content {
+		-webkit-animation: runInnerOut .6s ease;
+		-moz-animation: runInnerOut .6s ease;
+		-o-animation: runInnerOut .6s ease;
+		animation: runInnerOut .6s ease;
+		-webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+		animation-fill-mode: forwards;
+	}
+
+	#body-content.lateral-menu-is-open {
+		/* smooth the scrolling on touch devices - webkit browsers */
+		-webkit-overflow-scrolling: touch;
+		-webkit-animation: runInnerIn .6s ease;
+		-moz-animation: runInnerIn .6s ease;
+		-o-animation: runInnerIn .6s ease;
+		animation: runInnerIn .6s ease;
+		-webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+		animation-fill-mode: forwards;
+	}
+}

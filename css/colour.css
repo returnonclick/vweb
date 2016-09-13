@@ -1,0 +1,317 @@
+/* -----------------------------------------------------
+
+Add here all your CSS customizations
+
+Note: IE9 doesn't support transitions and animations
+
+-------------------------------------------------------*/
+body {
+    background: #FFF;
+    color: #999;
+}
+a {
+    color: rgba(1, 189, 237, 1);
+}
+a:hover {
+    color: rgba(1, 189, 237, 1);
+}
+a:focus {
+    color: rgba(1, 189, 237, 1);
+}
+hr {
+    border-color: rgba(146, 146, 146, 0.23);
+}
+header {
+    background-color: rgb(255, 255, 255);
+}
+
+::selection {
+    background-color: rgba(1, 189, 237, 1);
+    color: #FFF;
+}
+.cover {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+.heading {
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+.heading::after {
+    background-color: rgba(1, 189, 237, 1);
+}
+.divider {
+    border-bottom: 1px solid #f0f0f0;
+}
+#social-media a {
+    background-color: rgba(1, 189, 237, 1);
+    color: rgba(255, 255, 255, 1);
+}
+#cd-top-nav a {
+    color: #000;
+}
+#cd-top-nav a.current {
+    background-color: #242e30;
+}
+#cd-top-nav a:hover {
+    color: rgba(1, 189, 237, 1);
+}
+#top-nav .container {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px 5px #9d9d9d;
+}
+#top-nav .cd-navigation {
+    color: #909090;
+}
+#top-nav .cd-navigation li:hover {
+    box-shadow:inset 0px 3px 0px rgba(1, 189, 237, 1);
+}
+#top-nav .cd-navigation li a {
+    border-right: 1px solid #e0e0e0;
+}
+#top-nav .sub-menu {
+    background-color: rgba(255, 255, 255, .8);
+}
+#top-nav .sub-menu li {
+    border-bottom: 1px solid #999999;
+}
+#top-nav .sub-menu li:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+#top-nav a.current {
+    background-color: #3a4a4d;
+    color: #FFF;
+}
+
+@media only screen and (max-width: 768px) {
+    #cd-menu-trigger {
+        border: 1px solid rgba(1, 189, 237, .5);
+        background-color: rgba(1, 189, 237, 1);
+    }
+    #cd-menu-trigger .cd-menu-icon {
+        background-color: #fafafa;
+    }
+    #cd-menu-trigger.is-clicked .cd-menu-icon {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #cd-menu-trigger.is-clicked .cd-menu-icon::before, #cd-menu-trigger.is-clicked .cd-menu-icon::after {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    #cd-lateral-nav .cd-navigation {
+        color: #909090;
+    }
+    #cd-lateral-nav .cd-navigation li {
+        box-shadow:inset 0px 1px 0px rgba(1, 189, 237, 1);
+    }
+    #cd-lateral-nav .sub-menu {
+        background-color: rgba(1, 189, 237, .1);
+    }
+    #cd-lateral-nav .sub-menu li:hover{
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* Intro slider covers */
+.intro-slider .intro-slide-1 .cover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.intro-slider .intro-slide-2 .cover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.intro-slider .intro-slide-3 .cover {
+    background-color: rgba(0, 0, 0, 0);
+}
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+    background-color: rgba(194, 194, 194, 0.36);
+    color: #FFF;
+}
+.owl-carousel .owl-nav .owl-prev:hover, .owl-carousel .owl-nav .owl-next:hover {
+    background-color: rgba(194, 194, 194, 0.5);
+}
+.owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
+    background: rgba(1, 189, 237, 1);
+}
+
+
+#section-request-quote input, #section-request-quote textarea {
+    background-color: #fafafa;
+}
+
+.testimonial-box-icon:before {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.contact-section .cover {
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+#footer .copyright {
+    color: #585858;
+}
+.scrolltotop {
+    background-color: #FFF;
+    color: rgba(1, 189, 237, 1);
+}
+
+.scrolltotop:hover{
+    color: rgba(1, 189, 237, 1);
+}
+
+.scrolltotop:focus {
+    color: rgba(1, 189, 237, 1);
+}
+
+
+.btn-default {
+    color: #000;
+    background-color: #EEE;
+    border: 1px solid #E5E5E5;
+    box-shadow: inset 0px -2px rgba(0, 0, 0, 0.04);
+}
+.btn-default:hover, .btn-default:focus {
+    color: #000;
+    background-color: #EEE;
+    border-color: #CFCFCF;
+    box-shadow: inset 0px -65px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1);
+    box-shadow: inset 0px -3px rgba(0, 0, 0, 0.18);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary:focus, .btn-primary.disabled, .btn-primary[disabled] {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1)F;
+    box-shadow: inset 0px -65px rgba(0, 0, 0, 0.18);
+}
+
+.btn-white {
+    color: #000;
+    background-color: #FFF;
+    box-shadow: inset 0px 0px rgba(1, 189, 237, 1);
+}
+.btn-white:hover, .btn-white:active, .btn-white.active, .btn-white:focus, .btn-white.disabled, .btn-white[disabled] {
+    color: #FFF;
+    background-color: #FFF;
+    box-shadow: inset 0px -65px rgba(1, 189, 237, 1);
+}
+
+.btn-warning {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1);
+    box-shadow: inset 0px -3px rgba(0, 0, 0, 0.1);
+}
+.btn-warning:hover, .btn-warning:active, .btn-warning.active, .btn-warning:focus, .btn-warning.disabled, .btn-warning[disabled] {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1);
+    box-shadow: inset 0px -65px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1);
+    box-shadow: inset 0px -3px rgba(0, 0, 0, 0.1);
+}
+.btn-danger:hover, .btn-danger:active, .btn-danger.active, .btn-danger:focus, .btn-danger.disabled, .btn-danger[disabled] {
+    color: #FFF;
+    background-color: rgba(1, 189, 237, 1);
+    box-shadow: inset 0px -65px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    color: #FFF;
+    background-color: #5bb75b;
+    box-shadow: inset 0px -3px rgba(0, 0, 0, 0.1);
+}
+.btn-success:hover, .btn-success:active, .btn-success.active, .btn-success:focus, .btn-success.disabled, .btn-success[disabled] {
+    color: #FFF;
+    background-color: #5bb75b;
+    box-shadow: inset 0px -65px rgba(0, 0, 0, 0.1);
+}
+
+.btn-info {
+    color: #FFF;
+    background-color: #40B1CB;
+    box-shadow: inset 0px 0px #000;
+}
+.btn-info:hover, .btn-info:active, .btn-info.active, .btn-info:focus, .btn-info.disabled, .btn-info[disabled] {
+    color: #FFF;
+    background-color: #40B1CB;
+    box-shadow: inset 0px -65px #000;
+}
+
+.btn-link {
+    border-color: transparent;
+    cursor: pointer;
+    color: rgba(1, 189, 237, 1);
+    border-radius: 2px;
+}
+.btn-link, .btn-link:active, .btn-link:focus, .btn-link[disabled] {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+.btn-inverse {
+    color: #FFF;
+    background-color: #000;
+    box-shadow: inset 0px 0px rgba(1, 189, 237, 1);
+}
+.btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, .btn-inverse:focus, .btn-inverse.disabled, .btn-inverse[disabled] {
+    color: #FFF;
+    background-color: #000;
+    box-shadow: inset 0px -65px rgba(1, 189, 237, 1);
+}
+
+.btn-transparent {
+    color: #000;
+    background-color: transparent;
+    border: 2px solid #000;
+    box-shadow: inset 0px 0px #000;
+}
+.btn-transparent:hover, .btn-transparent:focus {
+    color: #FFF;
+    background-color: transparent;
+    border-color: #000;
+    box-shadow: inset 0px -65px #000;
+}
+
+.btn-transparent-white {
+    color: #FFF;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    box-shadow: inset 0px 0px #FFF;
+}
+.btn-transparent-white:hover, .btn-transparent-white:focus {
+    color: #000;
+    background-color: transparent;
+    border-color: #FFF;
+    box-shadow: inset 0px -65px #FFF;
+}
+
+
+/* Text colors */
+.text-main { color: rgba(1, 189, 237, 1) !important; } /* Template main color */
+.text-white { color: #FFF !important; }
+.text-gray { color: #888 !important; }
+.text-light-gray { color: #BBB !important; }
+.text-dark { color: #000 !important; }
+.text-green { color: #4B9D13 !important; }
+.text-blue { color: rgba(1, 189, 237, .5) !important; }
+.text-yellow { color: #FF9C00 !important; }
+.text-red { color: #F20000 !important; }
+.text-brown { color: #A38027 !important; }
+.text-purple { color: #800080 !important; }
+
+/* Background colors */
+.bg-main { background-color: rgba(1, 189, 237, 1) !important; } /* Template main color */
+.bg-white { background-color: #FFF !important; }
+.bg-gray { background-color: #888 !important; }
+.bg-light-gray { background-color: #F2F2F2 !important; }
+.bg-dark { background-color: #111 !important; }
+.bg-green { background-color: #4B9D13 !important; }
+.bg-blue { background-color: rgba(1, 189, 237, .5) !important; }
+.bg-yellow { background-color: #FF9C00 !important; }
+.bg-red { background-color: #F20000 !important; }
+.bg-brown { background-color: #A38027 !important; }
+.bg-purple { background-color: #800080 !important; }

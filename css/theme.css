@@ -1,0 +1,625 @@
+/*---------------------------------------------------------------------------------
+
+Master Stylesheet
+
+Template:	ROC - Responsive HTML5 Template
+Author: 		Return On Click
+URL:			http://returnonclick.com.au
+
+Note: IE9 doesn't support transitions and animations
+
+---------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  Base Styles
+/* ------------------------------------------------------------------------- */
+html, body {
+	height: 100% !important;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-size: 14px;
+}
+a {
+	font-weight: normal;
+}
+a:hover, a:focus {
+	text-decoration: none;
+}
+a:focus {
+	outline: none;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+p {
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	letter-spacing: -0.5px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+
+.cover { /* Element cover */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.lead {
+	font-size: 21px;
+}
+.thumbnail {
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+}
+
+
+/* ------------------------------------ *
+ *  Body content
+/* ------------------------------------ */
+
+#body-content {
+	height: 100%;
+}
+
+
+/* ------------------------------------ *
+ *  Heading
+/* ------------------------------------ */
+
+.heading {
+	border-bottom: 1px solid;
+	padding-bottom: 15px;
+	z-index: 2;
+}
+.heading::after {
+	position: absolute;
+	content: "";
+	height: 3px;
+	width: 30px;
+	bottom: -1px;
+}
+
+.heading h1 {
+	margin: 0;
+	font-size: 30px;
+	font-weight: bold;
+}
+.heading h1 span {
+	display: inline-block;
+	padding: 0px 10px;
+	margin-right: 5px;
+}
+.heading .divider {
+	margin-bottom: 0;
+}
+
+/* heading size */
+.heading-xsm h1 {
+	font-size: 28px;
+}
+.heading-sm h1 {
+	font-size: 42px;
+}
+.heading-md h1 {
+	font-size: 52px;
+}
+.heading-lg h1 {
+	font-size: 62px;
+}
+.heading-xlg h1 {
+	font-size: 72px;
+}
+
+/* heading align */
+.heading-center {
+	text-align: center;
+}
+.heading-center .divider {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+.heading-right {
+	text-align: right;
+}
+.heading-right .divider {
+	margin-left: auto;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	.heading h1 {
+		font-size: 42px;
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Divider
+/* ------------------------------------ */
+
+/* divider align */
+.divider-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.divider-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+
+/* ------------------------------------ *
+ *  Page sections
+/* ------------------------------------ */
+
+section {
+	position: relative;
+	padding: 80px 0;
+	overflow: hidden;
+}
+section .container {
+	z-index: 2;
+}
+#section-call-to-action {
+	padding: 15px 0;
+}
+#section-featured-services {
+	padding: 40px 0;
+}
+#section-about-us {
+	padding: 40px 0;
+}
+#section-request-quote {
+	padding: 40px 0;
+}
+#section-testimonial {
+	padding: 40px 0;
+}
+
+/* ------------------------------------ *
+ *  Intro section
+/* ------------------------------------ */
+
+#section-intro {
+	position: relative;
+	overflow: hidden;
+	height: 65%;
+}
+
+@media only screen and (max-width: 768px) {
+	#section-intro {
+		height: 100%;
+	}
+}
+
+.intro-carousel {
+	max-height: 100%;
+}
+
+.intro-caption {
+	position: absolute;
+	bottom: 180px;
+	left: 80px;
+	z-index: 3;
+}
+
+.intro-caption h1 {
+	font-size: 82px;
+	font-weight: bold;
+}
+
+.intro-caption h1 span {
+	display: inline-block;
+	padding: 0px 12px;
+	margin-right: 3px;
+}
+
+.intro-caption .divider {
+	margin: 30px 0 30px 0;
+}
+
+.intro-caption p {
+	margin: 15px 0 0 0;
+	font-size: 28px;
+}
+
+.made-with-love {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	font-size: 14px;
+	font-weight: 300;
+	z-index: 3;
+}
+
+@media only screen and (max-width: 992px) {
+	.intro-caption h1 {
+		font-size: 68px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.intro-caption {
+		bottom: 80px;
+		left: 30px;
+	}
+	.intro-caption h1 {
+		font-size: 32px;
+	}
+	.intro-caption p {
+		font-size: 18px;
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Intro slider
+/* ------------------------------------ */
+.intro-slider .slide-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+.intro-slider .slide-image {
+}
+
+/* Zoom slide image on hover (no effect on small devices.) */
+@media only screen and (min-width : 992px) {
+	.intro-slider .slide-image {
+		-webkit-transition: all 12s ease;
+		transition: all 12s ease;
+	}
+	.intro-slider .slide-wrapper:hover .slide-image {
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+	}
+}
+
+/* Intro slider dots (OWL Carousel) */
+.intro-slider .owl-carousel .owl-dots {
+	position: absolute;
+	bottom: 85px;
+	right: 30px;
+}
+
+.intro-slider .owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 0px 4px;
+	border-radius: 0;
+}
+
+.intro-slider .owl-dots .owl-dot:hover span {
+	height: 15px;
+}
+
+.intro-slider .owl-dots .owl-dot.active span {
+	height: 22px;
+}
+
+/* ------------------------------------ *
+ *  OWL Carousel
+/* ------------------------------------ */
+
+/* OWL controls */
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+	position: absolute;
+}
+
+/* Prev/Next buttons */
+.owl-nav {
+	margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	.owl-nav { /* Disable Prev/Next buttons on smaller devices */
+		display: none;
+	}
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	line-height: 54px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-size: 24px;
+	opacity: 0;
+	border-radius: 0;
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.owl-carousel:hover .owl-nav .owl-prev, .owl-carousel:hover .owl-nav .owl-next {
+	opacity: 1;
+}
+.owl-carousel .owl-nav .owl-prev {
+	left: 0px;
+}
+.owl-carousel .owl-nav .owl-next {
+	right: 0px;
+}
+.owl-carousel:hover .owl-nav .owl-prev {
+	left: 40px;
+}
+.owl-carousel:hover .owl-nav .owl-next {
+	right: 40px;
+}
+.owl-carousel:hover .owl-nav .disabled {
+	cursor: default;
+}
+
+/* Dots */
+.owl-dots .owl-dot span {
+	width: 10px;
+	height: 10px;
+	margin: 0px 5px;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+
+/* ------------------------------------ *
+ *  Scroll down arrow
+/* ------------------------------------ */
+.scroll-down-arrow {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	margin-left: -15px;
+	width: 30px;
+	height: 30px;
+	z-index: 3;
+}
+
+.scroll-down-arrow span {
+	position: relative;
+	font-size: 24px;
+	-webkit-animation: mymove 1.4s infinite ease;
+	animation: mymove 1.4s infinite ease;
+}
+
+@-webkit-keyframes mymove { /* Chrome, Safari, Opera */
+    0% { top: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 7px; opacity: 0; }
+}
+
+@keyframes mymove { /* Standard */
+    0% { top: 0; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 7px; opacity: 0; }
+}
+
+
+/* ------------------------------------ *
+ *  Call-To-Action section
+/* ------------------------------------ */
+
+#section-call-to-action .lead {
+	margin: 10px 0;
+}
+
+@media only screen and (min-width: 1200px) {
+	#section-call-to-action .col-right .col-inner {
+		padding-left: 40px;
+	}
+}
+
+
+
+/* ------------------------------------ *
+ *  Featured Services
+/* ------------------------------------ */
+
+.service-up-inner {
+	position: relative;
+	margin: 20px 0 0 0;
+	overflow: hidden;
+}
+
+.service-up-inner img {
+	margin-bottom: 20px;
+}
+
+
+/* ------------------------------------ *
+ *  About Us
+/* ------------------------------------ */
+
+
+/* ------------------------------------ *
+ *  Request Quote
+/* ------------------------------------ */
+#section-request-quote input, #section-request-quote textarea {
+	border-radius: 0px;
+	padding: 30px 20px;
+}
+
+#section-request-quote textarea{
+	padding: 20px 20px 35px 20px;
+}
+
+/* ------------------------------------ *
+ *  Testimonial
+/* ------------------------------------ */
+.testimonial-box {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+
+.testimonial-box-icon:before {
+	content: '“';
+	position: absolute;
+	font-style: italic;
+	width: 45px;
+	height: 45px;
+	font-size: 50px;
+	border-radius: 0px;
+	text-align: center;
+}
+
+.testimonial-box-info {
+	display:inline-block;
+	margin-left: 60px;
+	margin-bottom: 50px;
+}
+
+
+/* ------------------------------------ *
+ *  Testimonials
+/* ------------------------------------ */
+.testimonial {
+	margin-top: -1px;
+}
+
+.testimonial-carousel {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+blockquote {
+	padding: 60px 20px;
+	margin: 0;
+	font-size: 22px;
+	line-height: 30px;
+	border: none;
+}
+
+/* ------------------------------------ *
+ *  Contact
+/* ------------------------------------ */
+.contact-section .col-inner {
+	position: relative;
+	z-index: 2;
+}
+
+@media only screen and (max-width: 992px) {
+	.contact-section .col-right .col-inner {
+		margin-top: 60px;
+	}
+}
+
+
+/* ------------------------------------ *
+ *  Buttons
+/* ------------------------------------ */
+.btn {
+	padding: 8px 15px;
+	text-transform: uppercase;
+	font-size: 17px;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.btn:hover, .btn:focus {
+	text-decoration: none;
+}
+
+.btn:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* button size */
+.btn-xsm {
+	font-size: 14px;
+}
+
+.btn-sm {
+	font-size: 15px;
+}
+
+.btn-lg {
+	padding: 12px 30px;
+	font-size: 20px;
+}
+
+.btn-xlg {
+	padding: 16px 40px;
+	font-size: 22px;
+}
+
+.btn-default.btn-lg {
+	padding: 11px 30px;
+}
+
+.btn-transparent.btn-lg, .btn-transparent-white.btn-lg {
+	padding: 10px 30px;
+}
+
+.btn-default.btn-xlg {
+	padding: 15px 40px;
+}
+
+.btn-transparent.btn-xlg, .btn-transparent-white.btn-xlg {
+	padding: 14px 40px;
+}
+
+/* button style */
+.btn-rounded {
+	border-radius: 30px;
+}
+
+
+/* ------------------------------------ *
+ *  Footer
+/* ------------------------------------ */
+#footer {
+	padding: 30px 0 50px 0;
+}
+
+
+/* ------------------------------------ *
+ *  Scroll to top button
+/* ------------------------------------ */
+.scrolltotop {
+	position: fixed;
+	display: none;
+	bottom: 15px;
+	right: 15px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 24px;
+	text-decoration: none;
+	z-index: 9999;
+}
+
+@media only screen and (max-width: 768px) {
+	.scrolltotop {
+		bottom: 15px;
+		right: 15px;
+	}
+}
